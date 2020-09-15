@@ -44,6 +44,7 @@ namespace Microsoft.OData.Service.Sample.Trippin.Submit
         {
             ODataProperty property = base.CreateStructuralProperty(structuralProperty, resourceContext);
 
+            var instance = resourceContext.ResourceInstance;
             var parent = resourceContext.SerializerContext.ExpandedResource;
             if (parent != null)
             {
@@ -51,20 +52,6 @@ namespace Microsoft.OData.Service.Sample.Trippin.Submit
             }
 
             return property;
-        }
-
-
-        public override ODataResource CreateResource(SelectExpandNode selectExpandNode, ResourceContext resourceContext)
-        {
-            ODataResource entry = base.CreateResource(selectExpandNode, resourceContext);
-
-            var parent = resourceContext.SerializerContext.ExpandedResource;
-            if (parent != null)
-            {
-                var parentInstance = parent;
-            }
-
-            return entry;
         }
     }
 }
