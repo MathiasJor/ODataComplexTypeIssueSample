@@ -1,5 +1,5 @@
 # ODataComplexTypeIssueSample
-A sample project displaying an issue with complex types in odata serializers
+A sample project displaying an issue with complex types in odata serializers. Original sample found here: https://github.com/OData/ODataSamples/tree/master/RESTier/Trippin
 
 Run application and run the following odata queries to see the issues:
 
